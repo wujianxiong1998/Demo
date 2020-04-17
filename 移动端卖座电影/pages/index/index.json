@@ -1,0 +1,13 @@
+{  
+  "navigationBarBackgroundColor": "#3498db",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "卖座网",
+  "usingComponents": {
+    "van-tabbar": "../../miniprogram_npm/@vant/weapp/tabbar/index",
+    "van-tabbar-item": "../../miniprogram_npm/@vant/weapp/tabbar-item/index",
+    "m-movie": "../movie/movie",
+    "m-music": "../music/music",
+    "m-map": "../map/map",
+    "m-user": "../user/user" 
+  }
+}

@@ -1,0 +1,58 @@
+<wxs src="./detail.wxs" module="foo" />
+<image class="head_pic" src="{{detailDatas.images.small}}"></image>
+<view class="intro">
+  <!-- 详情 -->
+  <view class="container">
+    <view class="detail">
+      <text class="title">{{detailDatas.title}}</text>
+      <text>{{foo.handleTags(detailDatas.genres)}}</text>
+      <text>{{detailDatas.pubdate}}上映</text>
+      <text>{{detailDatas.countries}} | {{detailDatas.durations[0]}}</text>
+    </view>
+
+    <!-- 评分 -->
+    <view class="average">
+    {{detailDatas.rating.average}}
+    <text class="minu">分</text>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <text class="desc">
+    {{foo.handleSum(detailDatas.summary,1)}}
+  </text>
+  <van-transition
+   show="{{ !toggle }}" 
+   duration="{{ { enter: 1000 } }}"
+   name="fade">
+    {{foo.handleSum(detailDatas.summary,2)}}
+  </van-transition>
+  <!-- 遮罩 -->
+  <view class="arrow">
+    <van-icon name="{{toggle?'arrow-down':'arrow-up'}}" bind:click="toggleWords"/>
+  </view>
+</view>
+<view class="gray"></view>
+<view class="gray"></view>
+<view class="pic_wall">
+  <view>演职人员</view>
+    <scroll-view scroll-x="true" style="height: 250rpx;">
+      <view class="pic_avatar">
+        <view wx:for="{{detailDatas.casts}}" wx:key="item">
+          <image src="{{item.avatars.small}}" bindtap="handleCasts" data-castsindex="{{index}}"></image>
+          <view class="name">{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+</view>
+<view class="gray"></view>
+
+<view class="pic_wall">
+<view>剧照</view>
+  <scroll-view scroll-x="true" style="height: 300rpx;">
+    <view class="pic_avatar">
+      <view wx:for="{{detailDatas.photos}}" wx:key="item">
+        <image class="img" data-avatarindex="{{index}}" bindtap="handleAvatar" src="{{item.image}}"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

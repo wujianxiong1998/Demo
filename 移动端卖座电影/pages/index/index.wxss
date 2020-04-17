@@ -1,0 +1,19 @@
+.van-popup {
+  width: 100%;
+  min-height: 100%;
+}
+.swiper {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.city {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  z-index: 10;
+}
+.btn .van-button {
+  width: 140rpx;
+  opacity: .5;
+}

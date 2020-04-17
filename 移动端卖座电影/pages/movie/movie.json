@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "../../miniprogram_npm/@vant/weapp/button/index",
+    "van-area": "../../miniprogram_npm/@vant/weapp/area/index",
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index",
+    "van-cell": "../../miniprogram_npm/@vant/weapp/cell/index",
+    "van-tab": "../../miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "../../miniprogram_npm/@vant/weapp/tabs/index",
+    "van-icon": "../../miniprogram_npm/@vant/weapp/icon/index",
+    "movie-item": "/components/movieItem/item"
+  }
+}

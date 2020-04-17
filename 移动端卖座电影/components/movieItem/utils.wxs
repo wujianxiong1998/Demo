@@ -1,0 +1,33 @@
+function handleWords(words) {
+  if (words) {
+    if (words.length > 5) {
+      return words.slice(0, 5) + '...';
+    }
+    return words;
+  }
+}
+
+function handleName(obj) {
+  if (obj) {
+    var newObj = [];
+    obj.forEach(function (item) {
+      newObj.push(item.name)
+    })
+    newObj = newObj.join(" ");
+    if (newObj.length > 12) {
+      return newObj.slice(0, 12) + "...";
+    }
+    return newObj;
+  }
+}
+
+function handleArea(area) {
+  if(area){
+    return area.slice(11, area.length - 1)
+  }
+}
+module.exports = {
+  handleWords: handleWords,
+  handleName: handleName,
+  handleArea: handleArea
+}

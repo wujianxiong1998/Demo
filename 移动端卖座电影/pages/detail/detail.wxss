@@ -1,0 +1,86 @@
+.head_pic{
+  width: 100%;
+  height: 420rpx;
+  vertical-align: bottom;
+}
+.intro {
+  width: 750rpx;
+  padding: 28rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: rgb(177, 177, 177);
+}
+.detail {
+  width: 600rpx;
+}
+.detail text {
+  display: block;
+  margin-bottom: 14rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+.average {
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  color: orange;
+  font-size: 34rpx;
+  font-style: italic;
+}
+.desc { 
+  width: 700rpx;
+  word-wrap: break-word;
+
+}
+.minu {
+  padding: 10rpx;
+  font-size: 22rpx;
+  font-style: normal;
+}
+.title {
+  font-size: 36rpx;
+  color: #000;
+}
+.arrow {
+  width: 100%;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.gray {
+  width: 100%;
+  background-color: rgb(226, 223, 223);
+  height: 20rpx;
+}
+.pic_wall {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.pic_avatar {
+  margin: 20rpx 0;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.pic_avatar image {
+  margin-right: 30rpx;
+  width: 150rpx;
+  height:160rpx
+}
+.name {
+  width: 160rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pic_avatar .img {
+  width: 200rpx;
+  height:200rpx;
+}

@@ -1,0 +1,12 @@
+<view class="item" bindtap="handleClick">
+	<wxs module="foo" src="./utils.wxs">
+	</wxs>
+	<image class="img" src="{{datas.images.small}}"></image>
+	<view class="info">
+		<text class="title">{{foo.handleWords(datas.title)}}</text>
+		<text>观众评分 <text  class="average">{{datas.rating.average==0?'待定':datas.rating.average}}</text></text>
+		<text>主演 : {{foo.handleName(datas.casts)}}</text>
+		<text>{{foo.handleArea(datas.pubdates[0])}} | {{datas.durations==""?'暂无':datas.durations[0]}}</text>
+	</view> 
+	<view class="more">购票</view>
+</view>

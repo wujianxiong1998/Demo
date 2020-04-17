@@ -1,0 +1,18 @@
+function handleTags(value) {
+  if(value) {
+    return value.join(' | ')
+  }
+}
+function handleSum(words,n) {
+  if(words) {
+    if(n==1){
+      return words.slice(0,48);
+    }else{
+      return words.slice(48,words.length);
+    }
+  }
+}
+module.exports = {
+  handleTags: handleTags,
+  handleSum: handleSum
+}

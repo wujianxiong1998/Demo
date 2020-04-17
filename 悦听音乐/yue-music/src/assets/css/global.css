@@ -1,0 +1,12 @@
+html,body,#app{
+  height:100%;
+  margin:0;
+  padding:0;
+  min-width: 1366px;
+}
+.el-table--scrollable-x .el-table__body-wrapper {
+  overflow-x: hidden;
+}
+.el-table .cell {
+  cursor: pointer;
+}

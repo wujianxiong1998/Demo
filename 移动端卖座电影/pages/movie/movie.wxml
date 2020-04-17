@@ -1,0 +1,25 @@
+<view class="swiper">
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{ imgs }}" wx:key="*this">
+			<swiper-item>
+				<view class="swiper-item {{ item }}">
+					<image src="{{item}}"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<!-- 标签页 -->
+<view class="navPage" >
+  <van-tabs active="{{ pageActive }}" bind:change="onPageChange">
+    <van-tab title="正在热映">
+			<movie-item 
+			 wx:for="{{movieData}}"
+			 wx:key="item" 
+			 datas="{{item}}"></movie-item>
+		</van-tab>
+    <van-tab title="即将上映">
+			<movie-item wx:for="{{soonData}}" wx:key="item" datas="{{item}}"></movie-item>
+		</van-tab>
+  </van-tabs>
+</view>
