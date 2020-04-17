@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .head {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 150px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #000;
+      border-radius: 10px;
+    }
+
+    .eye {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: skyblue;
+    }
+  </style>
+</head>
+
+<body onmousemove="handleMove(event)">
+  <div class="head">
+    <div class="eye"></div>
+  </div>
+  <script>
+    var eye = document.getElementsByClassName("eye")
+    var clientW = document.body.clientWidth
+    var clientH = document.body.clientHeight
+    // top: 0-50
+    // left: 0-120
+    var timer
+    function handleMove(event) {
+      clearTimeout(timer)
+      timer = setTimeout(move, 100)
+      function move() {
+        var left = event.pageX * 150 / clientW
+        var top = event.pageY * 80 / clientH
+        if (top > 50) {
+          top = 50
+        }
+        if (top < 0) {
+          top = 0
+        }
+        if (left > 120) {
+          left = 120
+        }
+        if (left < 0) {
+          left = 0
+        }
+        eye[0].style.top = top + "px"
+        eye[0].style.left = left + "px"
+        console.log(eye[0].style.top)
+        console.log("left:", eye[0].style.left)
+      }
+    }
+  </script>
+</body>
+
+</html>
