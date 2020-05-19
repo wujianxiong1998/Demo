@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin-bottom: 0;
+}
+li {
+  list-style: none;
+}
+.container , .row {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
