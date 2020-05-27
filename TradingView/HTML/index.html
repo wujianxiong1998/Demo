@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="body">
+        <div id="tv_chart_container"></div>
+    </div>
+    <!-- JS API -->
+    <script type="text/javascript" src="charting_library/charting_library.min.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
+    <script type="text/javascript" src="overrides.js"></script>
+    <script type="text/javascript" src="dataUpdater.js"></script>
+    <script type="text/javascript" src="datafees.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    
+    <script>
+
+        function initOnReady() {
+            var widget = window.tvWidget = new TradingView.widget({
+                // debug: true, // uncomment this line to see Library errors and warnings in the console
+                fullscreen: true,
+                symbol: 'AAPL',
+                interval: 'D',
+                container_id: "tv_chart_container",
+
+                //	BEWARE: no trailing slash is expected in feed URL
+                // datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com"),
+                library_path: "charting_library/",
+                locale: "zh",
+
+                disabled_features: ["use_localstorage_for_settings"],
+                enabled_features: ["study_templates"],
+                charts_storage_url: 'http://saveload.tradingview.com',
+                charts_storage_api_version: "1.1",
+                client_id: 'tradingview.com',
+                user_id: 'public_user_id'
+            });
+        };
+
+        let jsApi = null;
+        // onload ...
+        window.onload = function () {
+            jsApi = new TVjsApi("GXC-USDT");
+            jsApi.init();
+            // initOnReady()
+        }
+    </script>
+</body>
+
+</html>
